@@ -106,14 +106,16 @@ function displayGroups(allGroups, validGroups) {
     validGroupsList.innerHTML = "";
 
     allGroups.forEach(group => {
-        const li = document.createElement("li");
-        li.textContent = group.join(", ");
-        allGroupsList.appendChild(li);
+        const div = document.createElement("div");
+        div.classList.add("group-box");
+        div.textContent = group.join(", ");
+        allGroupsList.appendChild(div);
     });
 
     validGroups.forEach(group => {
-        const li = document.createElement("li");
-        li.textContent = group.join(", ");
-        validGroupsList.appendChild(li);
+        const div = document.createElement("div");
+        div.classList.add("group-box");
+        div.textContent = group.join(", ");
+        validGroupsList.appendChild(div);
     });
 }
