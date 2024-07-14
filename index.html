@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Group Generator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Group Generator</h1>
+        <form id="groupForm">
+            <label for="numPeople">Number of People:</label>
+            <input type="number" id="numPeople" name="numPeople" min="2" required>
+
+            <label for="groupSize">Group Size:</label>
+            <input type="number" id="groupSize" name="groupSize" min="2" required>
+
+            <label for="names">Enter Names (comma separated):</label>
+            <input type="text" id="names" name="names" required>
+
+            <label for="hasLeader">Assign Group Leader:</label>
+            <select id="hasLeader" name="hasLeader">
+                <option value="no">No</option>
+                <option value="yes">Yes</option>
+            </select>
+
+            <div id="leaderSection" style="display: none;">
+                <label for="leaderName">Enter Leader Name:</label>
+                <input type="text" id="leaderName" name="leaderName">
+            </div>
+
+            <button type="submit">Generate Groups</button>
+        </form>
+
+        <div id="results">
+            <h2>All Possible Groups</h2>
+            <ul id="allGroups"></ul>
+
+            <h2>Valid Groups</h2>
+            <ul id="validGroups"></ul>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
